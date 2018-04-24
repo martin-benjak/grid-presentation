@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid auto flow dense</title>
+</head>
+<body>
+
+
+<div class="container">
+	<h1>Headline</h1>
+	<p>Lorem</p>
+</div>
+
+<style>
+
+	p, h1 {
+		margin: 0;
+		padding: 0;
+	}
+
+	.container {
+		width: 50%;
+		height: 300px;
+		border: 3px solid #e5e500;
+
+		display: grid;
+		/*align-items: center;*/
+		/*justify-items: center;*/
+
+		/*align-content: center;*/
+		/*justify-content: center;*/
+
+		
+		/* GRID */
+		/* align-content -> Cancel stretch value and center non-stretch grid content into center vertically */
+		/* justify-items -> Center content inside grid cell to the center horizontally */
+		/*display: grid;
+		align-content: center;
+		justify-items: center;*/
+
+
+		/* FLEXBOX */
+		/* justify-content: Alignment around main axis (currently column axis because flex-direction) */
+		/* align-items: Alignment around cross axis (currently row axis because of flex-drection) ; */
+		/*display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;*/
+	}
+
+</style>
+
+
+
+
+</body>
+</html>

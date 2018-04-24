@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./grid-playground.css">
+	<title>Grid fundamentals - basic properties</title>
+</head>
+<body>
+<div class="container">
+	<div class="item item1"></div>
+	<div class="item item2"></div>
+	<div class="item item3"></div>
+	<div class="item item4"></div>
+	<div class="item item5"></div>
+	<div class="item item6"></div>
+	<div class="item item7"></div>
+	<div class="item item8"></div>
+	<div class="item item9"></div>
+	<div class="item item10"></div>
+</div>
+
+<style>
+
+html, body {
+	overflow: hidden;
+}
+	
+/*
+WRAPPER (CONTAINER)
+- All immediate children of .container is grid-items (display: grid)
+- We were defined 3 columns and each one has 100px width (grid-template-columns: 100px 100px 100px OR grid-template-columns: repeat(3, 100px)). We can define auto value (responsive)
+- We were defined height of each row (grid-template-rows: 100px 50px 15px)
+- Spaces around grid-item (grid-gab: 20px)
+- We can define how to a new grid value which is not explicitly defined will be added (grid-value-flow: row (default value) or column)
+*/
+.container {
+	display: grid;
+	grid-template-columns: 100px 100px 100px;
+	/*grid-template-columns: repeat(3, 100px);*/
+	/*grid-template-columns: repeat(3, 1fr);*/
+	/*grid-template-columns: 1fr 3fr 1fr;*/
+
+	grid-template-rows: 100px 50px 15px;
+	grid-gap: 20px;
+	grid-auto-flow: row;
+}
+
+
+/*
+PARTICULAR ITEM
+- We can define spanning for each item. For example if we want a particular item to expand for 2 items in one row, we can use grid-column: span 2. If we want a particular item to expand for 2 items in column, we can use grid-row: span 2
+- We can explictily define where exactly the merged columns/rows will be placed (grid-column-start, grid-column-end)
+- 
+*/
+.item5 {
+	grid-column: span 2;
+	/*
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-column: 2 / span 2; (Combination of grid-column-start plus git-column-end
+	grid-column: 1 / -1; (100% width)
+	*/
+	grid-row: span 2;
+}
+
+.item {
+	background-color: #e5e5ff;
+}
+
+</style>
+</body>
+</html>
